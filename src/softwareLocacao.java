@@ -14,7 +14,7 @@ public class softwareLocacao {
         novocliente.setCpf(dd.nextLine());
         System.out.println("Qual a data de Nascimento do cliente?(DD/MM/AAA)?");
         novocliente.setDtNasc(dd.nextLine());
-
+        dadoscliente.add(novocliente);
 
         //Entrada das informações dos veiculos
         System.out.println("Qual tipo de veiculo deseja alugar?");
@@ -31,6 +31,7 @@ public class softwareLocacao {
         veiculo.setModelo(sc.nextLine());
         System.out.println("Qual a cor do veiculo?");
         veiculo.setCor(sc.nextLine());
+        dadosVeiculo.add(veiculo);
 
         //Usa switch para definir quais as próximas perguntas serão exibidas na tela
         switch (tipoVeiculo) {
@@ -44,6 +45,7 @@ public class softwareLocacao {
                 moto.setPartida(sc1.nextLine());
                 System.out.println("Quantas cilindradas tem a moto?");
                 moto.setCilindrada(sc1.nextLine());
+                dadosMoto.add(moto);
                 break;
             case 2:
                 ArrayList<Carro> dadosCarro = new ArrayList<>();
@@ -53,6 +55,7 @@ public class softwareLocacao {
                 carro1.setEstepe(ss.nextLine());
                 System.out.println("O carro possui Airbag?");
                 carro1.setEstepe(ss.nextLine());
+                dadosCarro.add(carro1);
                 break;
             case 3:
                 ArrayList<Carro> dadosCarro2 = new ArrayList<>();
@@ -62,6 +65,7 @@ public class softwareLocacao {
                 carro2.setEstepe(ss1.nextLine());
                 System.out.println("O carro possui Airbag?");
                 carro2.setEstepe(ss1.nextLine());
+                dadosCarro2.add(carro2);
                 break;
         }
         //Cria variavel com a quantidade de dias
